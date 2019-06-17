@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.zhu.domain.User;
 
-@Controller
+@RestController
 public class HelloController {
 	 private static Logger logger = LoggerFactory.getLogger(HelloController.class);// slf4j日志记录器
 	
@@ -33,7 +33,6 @@ public class HelloController {
 	 * 
 	 */
 	@RequestMapping(value="/login.do")
-	@ResponseBody
 	public User login(User user) {
 		return user;
 	}
